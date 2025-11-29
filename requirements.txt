@@ -1,0 +1,17 @@
+# FastAPI and Server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+
+# Database
+sqlalchemy==2.0.25
+
+# Pydantic for validation
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Python dotenv for environment variables
+python-dotenv==1.0.0
+
+# Optional: For better development experience
+python-multipart==0.0.6  # For form data and file uploads
+email-validator==2.1.0   # For email validation in Pydantic models

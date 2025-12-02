@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager
+import os
 
 from database import init_db
 from routes_items import router as items_router
@@ -80,6 +82,11 @@ def health_check():
         "database": "connected"
     }
 
+
+# Mount static files for images
+if os.path.exists("images"):
+    app.mount("/images", StaticFiles(directory="images"), name="images")
+    print("📸 Static images directory mounted at /images")
 
 # Include routers
 app.include_router(items_router)

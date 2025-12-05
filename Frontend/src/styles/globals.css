@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --beige-cream: #f7f4ef;
+  --warm-tan: #e8dfd1;
+  --soft-brown: #a89080;
+  --earth-brown: #6b5d52;
+  --dark-brown: #4a3f35;
+  --muted-green: #7a9178;
+  --muted-navy: #4a5c6a;
+  --accent-sage: #9ba896;
+  --cream-white: #fefbf6;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  background-color: var(--beige-cream);
+  color: var(--dark-brown);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", "Georgia", serif;
+  font-weight: 500;
+  color: var(--dark-brown);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--earth-brown);
+}
+
+small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--soft-brown);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--warm-tan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soft-brown);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--earth-brown);
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(122, 145, 120, 0.3);
+  color: var(--dark-brown);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
